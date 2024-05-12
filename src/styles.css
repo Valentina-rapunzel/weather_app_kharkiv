@@ -11,9 +11,7 @@ a:hover {
   cursor: pointer;
   color: rgb(213, 223, 253);
 }
-header {
-  padding-bottom: 50px;
-}
+
 main {
   padding: 30px 0;
 }
@@ -67,13 +65,13 @@ main {
 }
 
 .current-city {
-  color: #d6f6fe;
+  color: #d79af9;
   font-size: 50px;
   font-weight: 900;
   margin: 0;
 }
 .current-country {
-  color: #d6f6fe;
+  color: #d79af9;
   font-size: 45px;
   font-weight: 600;
   margin: 0;
@@ -83,15 +81,11 @@ main {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  text-align: center;
   padding: 0px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
-.current-details strong {
-  color: #ff822d;
-  padding: 0;
-  margin: 0;
-}
 .left-block {
   margin-left: 20px;
 }
@@ -101,21 +95,13 @@ main {
 }
 .current-temperature-value {
   color: #eaf8fc;
-  font-size: 60px;
+  font-size: 80px;
   font-weight: bold;
 }
 .current-temperature-icon {
-  width: 100px;
+  width: 150px;
   position: relative;
-  top: -5px;
-}
-
-.current-temperature-unit {
-  color: #92a0a3;
-  text-decoration: none;
-  font-size: 40px;
-  position: relative;
-  top: -15px;
+  top: -10px;
 }
 
 .current-date,
@@ -123,11 +109,20 @@ main {
   position: relative;
   top: -10px;
   color: #ffffff;
-}
-.current-date,
-.current-time {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1.5;
+}
+.temperature-block {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+.current-temperature-unit {
+  color: #92a0a3;
+  text-decoration: none;
+  font-size: 40px;
+  position: relative;
+  top: 10px;
 }
 
 span.today {
@@ -140,9 +135,10 @@ span.today {
 
 ul {
   padding: 0;
-  margin: 0;
+  margin-top: 30px;
   list-style-type: none;
   color: rgb(174, 233, 249);
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -172,18 +168,16 @@ ul {
   background: rgba(43, 83, 92, 0.5);
   display: flex;
   justify-content: space-between;
-  margin: 30px auto;
-  padding: 20px 30px 30px 20px;
+  margin: 0 auto;
+  padding: 20px;
   /* margin-top: 20px;
   text-align: center; */
   border-radius: 20px;
-
-  color: #551a8b;
 }
 .weather-forecast-day {
   font-size: 20px;
   opacity: 0.8;
-  color: #b660d2;
+  color: #da74fc;
   font-weight: 800;
 }
 .weather-forecast-date {
@@ -193,15 +187,12 @@ ul {
 }
 .weather-forecast-icon {
   width: 100%;
-  color: #e8c399;
-  position: relative;
-  top: 10px;
+  margin: 0 auto;
 }
 .weather-forecast-temperatures {
   font-weight: 400;
   text-align: center;
-  position: relative;
-  top: 10px;
+  margin: 0 auto;
 }
 .weather-forecast-temperature-min {
   opacity: 0.8;
@@ -209,7 +200,6 @@ ul {
 
 footer {
   text-align: center;
-  padding-top: 15px;
-
   color: rgb(131, 173, 184);
+  padding-top: 20px;
 }
