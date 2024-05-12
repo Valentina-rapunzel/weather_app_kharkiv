@@ -117,3 +117,66 @@ searchCity("Kharkiv");
 let form = document.querySelector("#search-form");
 console.log("form");
 form.addEventListener("submit", showCity, formatDate, showTime);
+
+
+// weather forecast
+
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+
+}
+function getForecast(city) {
+   let apiKey = "b30a2d9fef22b5o0t83182be74814ec8";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+   axios.get(apiUrl).then(displayForecast);
+}
+
+
+
+//  <div class="row">
+//    <div class="col-2">
+//      Mon
+//      <br />
+//      <span class="material-symbols-outlined sunny">partly_cloudy_day</span>
+//      <br />
+//      <span class="temperature">14°7°</span>
+//    </div>
+//    <div class="col-2">
+//      Tue
+//      <br />
+//      <span class="material-symbols-outlined rainy"> rainy </span>
+//      <br />
+//      <span class="temperature">14°2°</span>
+//    </div>
+//    <div class="col-2">
+//      Wed
+//      <br />
+//      <span class="material-symbols-outlined snowy"> weather_snowy </span>
+//      <br />
+//      <span class="temperature">4°-1°</span>
+//    </div>
+//    <div class="col-2">
+//      Thu
+//      <br />
+//      <span class="material-symbols-outlined snowy"> weather_hail </span>
+//      <br />
+//      <span class="temperature">4°1°</span>
+//    </div>
+//    <div class="col-2">
+//      Fri
+//      <br />
+//      <span class="material-symbols-outlined snowy"> weather_hail </span>
+//      <br />
+//      <span class="temperature">6°1°</span>
+//    </div>
+//    <div class="col-2">
+//      Sun
+//      <br />
+//      <span class="material-symbols-outlined snowy"> weather_hail </span>
+//      <br />
+//      <span class="temperature">8°3°</span>
+//    </div>
+//  </div>;

@@ -169,12 +169,7 @@ ul {
   top: 10px;
 }
 
-.container-days-of-the-week {
-  background: rgba(43, 83, 92, 0.5);
-  margin: 30px auto;
-  padding: 20px 30px 30px 20px;
-  border-radius: 20px;
-}
+
 .col-2 {
   font-weight: bold;
   color: #f7f1ed;
@@ -199,4 +194,14 @@ ul {
   top: 60px;
   left: 60px;
   color: #342216;
+}
+
+
+/* weather forecast  */
+
+.weather-forecast {
+  background: rgba(43, 83, 92, 0.5);
+  margin: 30px auto;
+  padding: 20px 30px 30px 20px;
+  border-radius: 20px;
 }
