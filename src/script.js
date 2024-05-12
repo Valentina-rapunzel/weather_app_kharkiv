@@ -1,4 +1,5 @@
-// GET DATE
+// TODAY'S DATE
+
 function formatDate(now) {
   let days = [
     "Sunday",
@@ -37,7 +38,7 @@ function formatDate(now) {
 
 // GET TIME
 
-function formatTime(now) {
+function showTime(now) {
   let hours = now.getHours();
   let minutes = now.getMinutes();
   console.log(hours);
@@ -57,7 +58,7 @@ let currentDate = document.querySelector("#current-date");
 let currentTime = document.querySelector("#current-time");
 
 currentDate.innerHTML = formatDate(todaysDate);
-currentTime.innerHTML = formatTime(todaysDate);
+currentTime.innerHTML = showTime(todaysDate);
 
 // GET TEMPERATURE
 
@@ -92,22 +93,27 @@ function displayTemperature(response) {
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `${wind}km/h`;
+  // Inject an icon
+  let iconElement = document.querySelector("#current-temperature-icon");
+  let icon = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon"/>`;
+  iconElement.innerHTML = `${icon}`;
 }
 
 // GET CITY
-
-function search(event) {
-  event.preventDefault();
-
-  let searchInputElement = document.querySelector("#search-input");
-  let city = `${searchInputElement.value},`;
-
+function searchCity(city) {
   let key = "b30a2d9fef22b5o0t83182be74814ec8";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&=metric`;
-
   axios.get(apiUrl).then(displayTemperature);
 }
 
+function showCity(event) {
+  event.preventDefault();
+  let searchInputElement = document.querySelector("#search-input");
+  searchCity(searchInputElement.value);
+}
+
+searchCity("Tokyo");
+
 let form = document.querySelector("#search-form");
 console.log("form");
-form.addEventListener("submit", search);
+form.addEventListener("submit", showCity, formatDate, showTime);

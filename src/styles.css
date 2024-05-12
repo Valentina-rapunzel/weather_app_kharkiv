@@ -61,25 +61,15 @@ footer {
 .search-button:hover {
   cursor: pointer;
   font-weight: bolder;
-  background: rgba(165, 230, 255, 0.9);
+  background: rgba(154, 244, 252, 0.9);
 }
 .location {
   margin: 0 auto;
-}
-.current-temperature {
-  font-size: 48px;
-  padding-left: 30px;
 }
 
 .current-weather {
   display: flex;
   justify-content: space-between;
-}
-div.left-block {
-  margin: 0;
-  padding: 0;
-  padding-left: 20px;
-  padding-right: 30px;
 }
 
 .current-city {
@@ -108,17 +98,30 @@ div.left-block {
   padding: 0;
   margin: 0;
 }
+.left-block {
+  margin-left: 20px;
+  
+}
+.right-block {
+  font-size: 48px;
+  margin-right: 20px;
 
+}
 .current-temperature-value {
   color: #eaf8fc;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: bold;
+}
+.current-temperature-icon {
+  width: 100px;
+  position: relative;
+  top: -5px;
 }
 
 .current-temperature-unit {
   color: #92a0a3;
   text-decoration: none;
-  font-size: 50px;
+  font-size: 40px;
   position: relative;
   top: -15px;
 }
@@ -164,11 +167,6 @@ ul {
   text-align: center;
   position: relative;
   top: 10px;
-}
-.current-temperature-icon {
-  font-size: 60px;
-  position: relative;
-  top: -20px;
 }
 
 .container-days-of-the-week {
