@@ -25,7 +25,7 @@ function formatDate(now) {
     "December",
   ];
   let day = days[now.getDay()];
-  let date = now.getDay();
+  let date = now.getDate();
   let month = months[now.getMonth()];
 
   console.log(day);
@@ -94,18 +94,6 @@ function displayTemperature(response) {
   windElement.innerHTML = `${wind}km/h`;
 }
 
-// FAHRENHEIT
-
-// function TempUnits(response) {
-
-//   let temperatureElement = document.querySelector("#current-temperature");
-//   console.log(response);
-//   let temperature = response.data.temperature.current;
-//   let farenheitFormula = `(${temperature} * 9/5) + 32`;
-//   temperatureElement.innerHTML = Math.round(farenheitFormula);
-// }
-// let convertFarenheit = document.querySelector("#F");
-// convertFarenheit.addEventListener("click", TempUnits);
 // GET CITY
 
 function search(event) {
