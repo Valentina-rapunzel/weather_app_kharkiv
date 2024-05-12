@@ -112,7 +112,7 @@ function showCity(event) {
   searchCity(searchInputElement.value);
 }
 
-searchCity("Tokyo");
+searchCity("Kharkiv");
 
 let form = document.querySelector("#search-form");
 console.log("form");
