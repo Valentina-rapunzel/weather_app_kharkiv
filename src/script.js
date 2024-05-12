@@ -64,7 +64,7 @@ currentTime.innerHTML = showTime(todaysDate);
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
-  console.log(response);
+  // console.log(response.data);
   let temperature = response.data.temperature.current;
   temperatureElement.innerHTML = Math.round(temperature);
 
@@ -77,7 +77,7 @@ function displayTemperature(response) {
   countryElement.innerHTML = country;
 
   let pressure = response.data.temperature.pressure;
-  console.log(pressure);
+  // console.log(pressure);
   let description = response.data.condition.description;
   let humidity = response.data.temperature.humidity;
   let wind = response.data.wind.speed;
@@ -134,7 +134,10 @@ function getForecast(city) {
    axios.get(apiUrl).then(displayForecast);
 }
 
+function displayForecast(response) {
+  console.log(response.data);
 
+}
 
 //  <div class="row">
 //    <div class="col-2">
